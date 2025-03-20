@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply w-full max-w-5xl mx-auto;
+  }
+  .bg-default {
+    @apply bg-[#f9fad2];
+  }
+  .cart-container {
+    @apply container p-5 min-h-[calc(100vh-160px)] flex flex-col items-center mt-[100px];
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes open {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-open {
+  animation: open 0.5s ease-out forwards;
+}
+
+@keyframes close {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }  
+}
+
+.animate-close {
+  animation: close 0.5s ease-in forwards;
+}
+
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #b6b6b6; /* Cor de fundo do track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #838383; /* Cor do thumb */
+  border-radius: 10px; /* Borda arredondada do thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000; /* Cor do thumb ao passar o mouse */
+}
