@@ -59,7 +59,7 @@ export function Home() {
         className="fixed inset-0 backdrop-blur bg-black/50 flex justify-center items-center z-10"
         onClick={ handleClose }
       >
-        <div className={`w-[350px] h-[430px] bg-white p-6 rounded-lg shadow-lg relative ${ showDetails ? 'animate-open' : '' } ${ closingDetails ? 'animate-close' : '' } }`}>
+        <div className={`w-[350px] h-[430px] bg-white p-6 rounded-lg shadow-lg relative ${ showDetails ? 'animate-open' : '' } ${ closingDetails ? 'animate-close' : '' }`} onClick={(e) => e.stopPropagation()}>
           <IoIosCloseCircle 
             size={ 30 } 
             className="text-red-400 absolute top-1 right-1 cursor-pointer" 
